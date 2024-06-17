@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "/Users/pavelpetakov/fleet/solidjs-template",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
