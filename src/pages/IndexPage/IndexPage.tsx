@@ -14,7 +14,7 @@ export const IndexPage: Component = () => {
   });
 
   return (
-    <Page title="Home Page">
+    <Page title="Home Page PASHA">
       <p>
         This page is a home page in this boilerplate. You can use the links below to visit other
         pages with their own functionality.
