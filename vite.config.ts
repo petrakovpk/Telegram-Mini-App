@@ -1,12 +1,12 @@
-// import { readFileSync } from 'node:fs';
-// import { dirname, resolve } from 'node:path';
-// import { fileURLToPath } from 'node:url';
+import { readFileSync } from 'node:fs';
+import { dirname, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { defineConfig } from 'vite';
 import solidPlugin from 'vite-plugin-solid';
 import tsconfigPaths from 'vite-tsconfig-paths';
 
 export default defineConfig({
-  base: '/solidjs-template/',
+  base: '',
   plugins: [
     /*
     Uncomment the following line to enable solid-devtools.
@@ -21,14 +21,14 @@ export default defineConfig({
   // Learn more:
   // https://docs.telegram-mini-apps.com/platform/getting-app-link#mkcert
   //
-  //   server: {
-  //   port: 55443,
-  //   https: {
-  //     cert: readFileSync(resolve(dirname(fileURLToPath(import.meta.url)), './tma.internal.pem')),
-  //     key: readFileSync(resolve(dirname(fileURLToPath(import.meta.url)), './tma.internal-key.pem')),
-  //   },
-  //   host: 'tma.internal',
-  // },
+    server: {
+    port: 55444,
+    // https: {
+    //   cert: readFileSync(resolve('ssl/tma.internal.pem')),
+    //   key: readFileSync(resolve('ssl/tma.internal-key.pem')),
+    // },
+    //host: --server,
+  },
   build: {
     target: 'esnext',
 //    outDir: 'dist',

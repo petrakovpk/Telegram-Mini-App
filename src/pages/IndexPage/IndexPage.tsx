@@ -1,4 +1,4 @@
-import { For, Show, type Component } from 'solid-js';
+import { For, Show, type Component, onMount } from 'solid-js';
 import { Dynamic } from 'solid-js/web';
 
 import { Link } from '@/components/Link/Link.js';
@@ -8,6 +8,11 @@ import { routes } from '@/navigation/routes.js';
 import './IndexPage.css';
 
 export const IndexPage: Component = () => {
+
+  onMount(() => {
+      console.log("Open IndexPage!");
+  });
+
   return (
     <Page title="Home Page">
       <p>

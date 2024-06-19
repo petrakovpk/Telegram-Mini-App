@@ -1,5 +1,5 @@
 import { retrieveLaunchParams, useInitData, type User } from '@tma.js/sdk-solid';
-import { createMemo, Show, type Component } from 'solid-js';
+import { createMemo, Show, type Component, onMount } from 'solid-js';
 
 import { DisplayData, type DisplayDataRow } from '@/components/DisplayData/DisplayData.js';
 import { Link } from '@/components/Link/Link.js';
@@ -28,6 +28,10 @@ export const InitDataPage: Component = () => {
 
   const initDataRows = createMemo<DisplayDataRow[] | undefined>(() => {
     const complete = initData();
+
+    onMount(() => {
+      console.log("Open InitData!");
+    });
 
     return complete && initDataRaw
       ? [
