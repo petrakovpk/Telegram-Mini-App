@@ -8,7 +8,6 @@ import { routes } from '@/navigation/routes.js';
 import './IndexPage.css';
 
 export const IndexPage: Component = () => {
-
   onMount(() => {
       console.log("Open IndexPage!");
   });

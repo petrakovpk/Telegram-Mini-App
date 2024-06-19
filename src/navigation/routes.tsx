@@ -5,6 +5,7 @@ import { InitDataPage } from '@/pages/InitDataPage/InitDataPage.js';
 import { LaunchParamsPage } from '@/pages/LaunchParamsPage.js';
 import { ThemeParamsPage } from '@/pages/ThemeParamsPage.js';
 import { TonConnectPage } from '@/pages/TonConnectPage/TonConnectPage.js';
+import { AstroPersonaPage } from "@/pages/AstroPersonaPage/AstroPersonaPage.js";
 
 interface Route {
   path: string;
@@ -18,6 +19,7 @@ export const routes: Route[] = [
   { path: '/init-data', Component: InitDataPage, title: 'Init Data' },
   { path: '/theme-params', Component: ThemeParamsPage, title: 'Theme Params' },
   { path: '/launch-params', Component: LaunchParamsPage, title: 'Launch Params' },
+  { path: '/astro-person', Component: AstroPersonaPage, title: 'Astro Persona'},
   {
     path: '/ton-connect',
     Component: TonConnectPage,
