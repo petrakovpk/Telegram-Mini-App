@@ -1,5 +1,4 @@
 import type { Component } from 'solid-js';
-import { onCleanup, onMount } from 'solid-js';
 
 import { IndexPage } from '@/pages/IndexPage/IndexPage.js';
 import { InitDataPage } from '@/pages/InitDataPage/InitDataPage.js';
@@ -14,38 +13,9 @@ interface Route {
   Icon?: Component;
 }
 
-// Функция-обертка для логирования
-const withLogging = (Component: Component, route: Route) => {
-  return (props: any) => {
-    // Логирование при монтировании компонента
-    onMount(() => {
-      console.log(`Navigated to route: ${route.path}`);
-      if (route.title) {
-        console.log(`Route title: ${route.title}`);
-      }
-    });
-
-    // Логирование при размонтировании компонента (если необходимо)
-    onCleanup(() => {
-      console.log(`Leaving route: ${route.path}`);
-    });
-
-    // Рендеринг исходного компонента
-    return <Component {...props} />;
-  };
-};
-
-// Функция для создания маршрута с логированием
-const createRouteWithLogging = (route: Route): Route => {
-  return {
-    ...route,
-    Component: withLogging(route.Component, route),
-  };
-};
-
 export const routes: Route[] = [
-  createRouteWithLogging({ path: '/', Component: IndexPage }),
-  createRouteWithLogging({ path: '/init-data', Component: InitDataPage, title: 'Init Data' }),
+  { path: '/', Component: IndexPage},
+  { path: '/init-data', Component: InitDataPage, title: 'Init Data' },
   { path: '/theme-params', Component: ThemeParamsPage, title: 'Theme Params' },
   { path: '/launch-params', Component: LaunchParamsPage, title: 'Launch Params' },
   {

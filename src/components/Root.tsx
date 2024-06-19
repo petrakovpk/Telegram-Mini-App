@@ -6,9 +6,9 @@ import { TonConnectUIProvider } from '@/tonconnect/TonConnectUIProvider.js';
 
 const Inner: Component = () => {
   const debug = retrieveLaunchParams().startParam === 'debug';
-  if (debug) {
-    import('eruda').then((lib) => lib.default.init());
-  }
+ // if (debug) {
+  import('eruda').then((lib) => lib.default.init());
+  //}
 
   return (
     <TonConnectUIProvider

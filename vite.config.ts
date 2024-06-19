@@ -6,7 +6,7 @@ import solidPlugin from 'vite-plugin-solid';
 import tsconfigPaths from 'vite-tsconfig-paths';
 
 export default defineConfig({
-  base: '',
+  base: '/Telegram-Mini-App/',
   plugins: [
     /*
     Uncomment the following line to enable solid-devtools.
@@ -21,14 +21,14 @@ export default defineConfig({
   // Learn more:
   // https://docs.telegram-mini-apps.com/platform/getting-app-link#mkcert
   //
-    server: {
-    port: 55444,
+    //server: {
+    //port: 55444,
     // https: {
     //   cert: readFileSync(resolve('ssl/tma.internal.pem')),
     //   key: readFileSync(resolve('ssl/tma.internal-key.pem')),
     // },
     //host: --server,
-  },
+  //},
   build: {
     target: 'esnext',
 //    outDir: 'dist',
